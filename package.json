@@ -1,0 +1,26 @@
+{
+  "name": "shanbay-word-image-helper",
+  "version": "1.0.0",
+  "description": "扇贝单词图片助手 - Chrome 扩展",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chrome-extension",
+    "shanbay",
+    "word",
+    "image",
+    "vocabulary"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+

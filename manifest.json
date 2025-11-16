@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "扇贝单词图片助手",
+  "version": "1.0.0",
+  "description": "按下热键后自动识别当前单词并显示谷歌图片搜索结果",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://*.shanbay.com/*",
+    "https://www.googleapis.com/*",
+    "https://api.unsplash.com/*",
+    "https://images.unsplash.com/*",
+    "https://source.unsplash.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.shanbay.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "show-word-image": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "显示当前单词的图片"
+    }
+  }
+}
+
